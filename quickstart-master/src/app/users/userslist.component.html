@@ -9,12 +9,13 @@
         </tr>
         </thead>
         <tbody>
-         <tr *ngFor = "let user of users">
+         <tr *ngFor = "let user of users" [class.selected]="user === selectedUser">
             <td>{{user.id}}</td>
             <td>{{user.name}}</td>
             <td>{{user.email}}</td>
-            <td><button (click)="viewDetail($user.id)">Details</button></td>
+            <td><button (click)="onSelect(user)">Detail</button></td>
          </tr>
         </tbody>
       </table>
 </div>
+<userdetail [user]="selectedUser"></userdetail>

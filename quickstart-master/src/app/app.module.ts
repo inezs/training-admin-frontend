@@ -6,10 +6,11 @@ import { AppComponent }  from './app.component';
 import { routing } from './app.routes';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-import { UsersService} from './users/listofusers.service';
+import { UsersService} from './users/users.service';
 import { UsersComponent } from './users/users.component';
 import { UsersList} from './users/userslist.component';
 import { UserForm } from './users/userform.component';
+import { UserDetail } from './users/userdetail.component'; 
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -21,7 +22,8 @@ import { UserForm } from './users/userform.component';
                   LoginComponent,
                   UsersComponent,
                   UsersList,
-                  UserForm 
+                  UserForm,
+                  UserDetail
                 ],
   bootstrap:    [ AppComponent ],
   providers:    [ UsersService]

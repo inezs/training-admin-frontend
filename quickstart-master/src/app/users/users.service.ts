@@ -10,7 +10,7 @@ const USERS : User[] = [
 @Injectable()
 export class UsersService{
 
-  getAll() : User[] {
+  getAllUsers() : User[] {
     return USERS.map(u => this.clone(u));
   }
   get(id: number) : User {
