@@ -13,7 +13,7 @@ export class UsersService{
   getAllUsers() : User[] {
     return USERS.map(u => this.clone(u));
   }
-  get(id: number) : User {
+  getUser(id: number) : User {
     return this.clone(USERS.find(u => u.id === id));
   }
 

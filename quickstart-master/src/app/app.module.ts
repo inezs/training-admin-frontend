@@ -10,7 +10,7 @@ import { UsersService} from './users/users.service';
 import { UsersComponent } from './users/users.component';
 import { UsersList} from './users/userslist.component';
 import { UserForm } from './users/userform.component';
-import { UserDetail } from './users/userdetail.component'; 
+import { UserDetailComponent } from './users/userdetail.component'; 
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -23,7 +23,7 @@ import { UserDetail } from './users/userdetail.component';
                   UsersComponent,
                   UsersList,
                   UserForm,
-                  UserDetail
+                  UserDetailComponent
                 ],
   bootstrap:    [ AppComponent ],
   providers:    [ UsersService]

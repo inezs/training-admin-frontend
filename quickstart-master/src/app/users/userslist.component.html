@@ -9,13 +9,13 @@
         </tr>
         </thead>
         <tbody>
-         <tr *ngFor = "let user of users" [class.selected]="user === selectedUser">
+         <tr *ngFor = "let user of users" >
             <td>{{user.id}}</td>
             <td>{{user.name}}</td>
             <td>{{user.email}}</td>
-            <td><button (click)="onSelect(user)">Detail</button></td>
+            <td><button (click)= goToUserDetail(user.id)>Detail</button></td>
          </tr>
         </tbody>
       </table>
 </div>
-<userdetail [user]="selectedUser"></userdetail>
+<router-outlet></router-outlet>

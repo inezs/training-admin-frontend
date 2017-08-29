@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { UsersService } from './users.service';
-import { UserDetail } from './userdetail.component';
-import { User } from './user';
+import { UserDetailComponent} from './userdetail.component';
 
 @Component({
     moduleId: module.id,
@@ -10,13 +11,11 @@ import { User } from './user';
 })
 
 export class UsersList {
-    constructor(private usersService: UsersService) {
+    constructor(private usersService: UsersService, private router: Router) {
     }
     users = this.usersService.getAllUsers();
 
-    selectedUser: User;
- 
-    onSelect(user: User): void {
-        this.selectedUser = user;
+    goToUserDetail(id: Number): void {
+        this.router.navigate(['/users', id]);
   }
 }
