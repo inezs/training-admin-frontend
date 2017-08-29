@@ -10,6 +10,6 @@ export class DashboardComponent {
     user: User = {
         id: 1,
         name: 'Inez Fiona Sutanto',
-        email: 'InezFiona.Sutanto@mitrais.com';
+        email: 'InezFiona.Sutanto@mitrais.com'
       };
 }
