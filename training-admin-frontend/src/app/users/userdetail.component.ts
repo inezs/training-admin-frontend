@@ -21,8 +21,4 @@ export class UserDetailComponent {
         this.user = this.usersService.getUser(this.id);
         });
     }
-
-    private ngOnDestroy() {
-        this.sub.unsubscribe();
-    }
 }
