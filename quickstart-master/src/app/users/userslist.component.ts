@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { UsersService } from './users';
+import { UsersService } from './listofusers.service';
 
 @Component({
     moduleId: module.id,
-    templateUrl: 'users.component.html'
+    selector: 'userslist',
+    templateUrl: 'userslist.component.html'
 })
 
 export class UsersList {
-    constructor(private usersService: UsersService) { 
+    constructor(private usersService: UsersService) {
     }
     users = this.usersService.getAll();
 }

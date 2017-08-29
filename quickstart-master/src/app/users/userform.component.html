@@ -1,0 +1,15 @@
+<div>
+    <form (ngSubmit)="onSubmit()" #profileForm="ngForm">
+        <label>ID    :</label><input type="text" id ="id" name ="id" [(ngModel)]="inputUser.id">
+        <label>Name  :</label><input type="text" id ="name" name = "name" [(ngModel)] = "inputUser.name">
+        <label>Email :</label><input type="text" id ="email" name = "email" [(ngModel)] = "inputUser.email">
+        <button type = "submit">Submit</button>
+    </form>
+</div>
+
+<div>
+    <p>Your input is:</p>
+    <p>ID    : {{inputUser.id}}</p>
+    <p>Name  : {{inputUser.name}}</p>
+    <p>Email : {{inputUser.email}}</p>
+</div>
