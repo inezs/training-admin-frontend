@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../users/user';
 
 @Component({
     moduleId: module.id,
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
 })
 
 export class DashboardComponent {
-    myId: number = 0;
-    myName: string = 'Inez Fiona Sutanto';
-    myEmail: string = 'InezFiona.Sutanto@mitrais.com';
+    user: User={
+    id : 0,
+    name : 'Inez Fiona Sutanto',
+    email : 'InezFiona.Sutanto@mitrais.com',
+    }
 }
